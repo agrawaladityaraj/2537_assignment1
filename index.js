@@ -1,5 +1,3 @@
-require("./utils.js");
-
 require("dotenv").config();
 const express = require("express");
 const session = require("express-session");
@@ -23,7 +21,7 @@ const mongodb_session_secret = process.env.MONGODB_SESSION_SECRET;
 
 const node_session_secret = process.env.NODE_SESSION_SECRET;
 
-var { database } = include("db");
+var { database } = require("./db.js");
 
 const userCollection = database.db(mongodb_database).collection("users");
 
