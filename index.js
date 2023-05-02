@@ -178,7 +178,9 @@ app.get("/members", (req, res) => {
   const random = getRandomInt(3);
   const html = `<h1>Hello, ${req.session.name}</h1>
   <br />
-  <image style="width:500px" src="/cat${random}.jpg" alt="cat${random}" />`;
+  <image style="width:500px" src="/cat${random}.jpg" alt="cat${random}" />
+  <br />
+  <a href="/logout"><button>Logout</button></a>`;
   res.send(html);
 });
 
